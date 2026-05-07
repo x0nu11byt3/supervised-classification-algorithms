@@ -4,6 +4,7 @@
 #include "../dataset/Dataset.h"
 #include <vector>
 #include <memory>
+#include <string>
 
 namespace ml {
 
@@ -21,6 +22,7 @@ namespace ml {
         public:
             void build(const std::vector<Instance>& data, int maxDepth, int minSamplesSplit);
             int predict(const std::vector<double>& features) const;
+            void print() const;
 
         private:
             std::unique_ptr<Node> root;
@@ -30,6 +32,7 @@ namespace ml {
             void splitData(const std::vector<Instance>& data, int featureIdx, double threshold,
                         std::vector<Instance>& left, std::vector<Instance>& right) const;
             int majorityClass(const std::vector<Instance>& data) const;
+            void printNode(const Node* node, const std::string& prefix, bool isLast) const;
         };
 
     } // namespace ml

@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
     tree.setMaxDepth(5);
     tree.setMinSamplesSplit(2);
     tree.train(train);
+    tree.print();
     double acc_tree = tree.accuracy(test);
     std::cout << "Accuracy ID3: " << acc_tree << std::endl;
 

@@ -12,6 +12,7 @@ public:
     int predict(const std::vector<double>& features) const override;
     void setMaxDepth(int depth) { maxDepth = depth; }
     void setMinSamplesSplit(int minSamples) { minSamplesSplit = minSamples; }
+    void print() const { tree.print(); }
 
 private:
     DecisionTree tree;
