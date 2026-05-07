@@ -59,19 +59,19 @@ For each class $c_k$ in the model:
 1. The unnormalised posterior log-probability is calculated:
 
    $$
-   \text{logProb}(c_k) = \log P(c_k) + \sum_{i=1}^{n} \log P(x_i \mid c_k)
+      \mathrm{logProb}(c_k) = \log P(c_k) + \sum_{i=1}^{n} \log P(x_i \mid c_k)
    $$
 
    where $\log P(x_i \mid c_k)$ is obtained from the logarithmic density function (logPDF) of a normal distribution with mean $\mu_{k,i}$ and variance $\sigma_{k,i}^2$:
 
    $$
-   \log P(x_i \mid c_k) = -\frac{1}{2}\log(2\pi\sigma_{k,i}^2) - \frac{(x_i - \mu_{k,i})^2}{2\sigma_{k,i}^2}
+      \log P(x_i \mid c_k) = -\frac{1}{2}\log(2\pi\sigma_{k,i}^2) - \frac{(x_i - \mu_{k,i})^2}{2\sigma_{k,i}^2}
    $$
 
 2. If $\text{logProb}(c_k) > \text{bestLogProb}$, then it is updated:
 
    $$
-   \text{bestLogProb} = \text{logProb}(c_k), \quad \text{bestClass} = c_k
+      \mathrm{bestLogProb} = \mathrm{logProb}(c_k), \quad \mathrm{bestClass} = c_k
    $$
 
 Finally, the class with the highest log-probability is returned:
