@@ -16,7 +16,7 @@ $$
 $$
 
 
-The attribute \(A\) that maximises \(\text{Profit}(S, A)\) is selected.
+The attribute $A$ that maximises $\text{Gain}(S, A)$ is selected.
 
 
 #### Naive Bayes
@@ -35,7 +35,7 @@ $$
 \hat{y} = \underset{c_k}{\arg\max} \left[ \log P(c_k) + \sum_{i=1}^{n} \log P(x_i \mid c_k) \right]
 $$
 
-where \(P(x_i \mid c_k)\) is estimated using frequency distributions (for categorical variables) or a Gaussian distribution (for continuous variables).
+where $P(x_i \mid c_k)$ is estimated using frequency distributions (for categorical variables) or a Gaussian distribution (for continuous variables).
 
 
 Means and variances are calculated for each feature and class.
