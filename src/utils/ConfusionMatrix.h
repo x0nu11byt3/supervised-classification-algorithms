@@ -7,32 +7,32 @@
 
 namespace ml {
 
-class ConfusionMatrix {
-public:
-    // Constructor: recibe las etiquetas únicas (p.ej. {0,1,2} o {1,2,3})
-    ConfusionMatrix(const std::vector<int>& labels);
+    class ConfusionMatrix {
+        public:
+            // Constructor: accepts unique tags (e.g. {0,1,2} or {1,2,3})
+            ConfusionMatrix(const std::vector<int>& labels);
 
-    // Añade un par (real, predicho)
-    void add(int trueLabel, int predLabel);
+            // Adds a pair (actual, predicted)
+            void add(int trueLabel, int predLabel);
 
-    // Calcula la exactitud
-    double accuracy() const;
+            // Calculate the accuracy
+            double accuracy() const;
 
-    // Calcula el error (1 - accuracy)
-    double error() const;
+            // Calculate the error (1 - accuracy)
+            double error() const;
 
-    // Imprime la matriz formateada (similar a las imágenes)
-    void print() const;
+            // Prints the formatted array (similar to the images)
+            void print() const;
 
-    // Devuelve la matriz cruda (para pruebas)
-    const std::vector<std::vector<int>>& getMatrix() const { return matrix; }
+            // Returns the raw array (for testing purposes)
+            const std::vector<std::vector<int>>& getMatrix() const { return matrix; }
 
-private:
-    std::vector<int> classLabels;           // etiquetas ordenadas
-    std::map<int, int> labelToIndex;        // mapeo etiqueta -> índice
-    std::vector<std::vector<int>> matrix;   // matriz n x n
-    int total = 0;
-};
+        private:
+            std::vector<int> classLabels;           // sorted tags
+            std::map<int, int> labelToIndex;        // tag mapping -> index
+            std::vector<std::vector<int>> matrix;   // matrix n x n
+            int total = 0;
+    };
 
 } // namespace ml
 
