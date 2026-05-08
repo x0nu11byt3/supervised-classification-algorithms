@@ -3,6 +3,7 @@ set(LIB_SOURCES
     id3/ID3.cpp
     id3/DecisionTree.cpp
     naive_bayes/GaussianNB.cpp
+    utils/ConfusionMatrix.cpp
 )
 
 add_library(ml_lib STATIC ${LIB_SOURCES})
