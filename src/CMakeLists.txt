@@ -1,5 +1,6 @@
 set(LIB_SOURCES
     dataset/Dataset.cpp
+    dataset/ArffLoader.cpp
     id3/ID3.cpp
     id3/DecisionTree.cpp
     naive_bayes/GaussianNB.cpp

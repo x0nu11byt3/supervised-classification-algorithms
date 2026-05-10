@@ -152,7 +152,7 @@ namespace ml {
     if (root) {
         printNode(root.get(), "", true);
     } else {
-        std::cout << "Árbol vacío.\n";
+        std::cout << "Empty Tree.\n";
     }
 }
 
