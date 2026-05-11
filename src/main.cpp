@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
     }
 
     Dataset train, test;
-    data.split(0.7, train, test);
+    data.split(0.8, train, test);
     std::cout << "Training: " << train.getInstances().size()
               << " instances, Test: " << test.getInstances().size() << std::endl;
 
